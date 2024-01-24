@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from './features/home/home.component';
+import { LoginButtonComponent } from './login-button';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [HomeComponent],
+  imports: [HomeComponent, LoginButtonComponent ],
   template: `
   <main>
     <header class="brand-name">
@@ -12,11 +13,12 @@ import { HomeComponent } from './home/home.component';
     </header>
     <section class="content">
       <app-home></app-home>
+      <app-login-button></app-login-button>
     </section>
   </main>
 `,
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'homes';
+  title = 'Project Untitled';
 }
